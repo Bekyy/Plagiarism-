@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %}My Page{% endblock %}
+{% block content %}
+<style type="text/css">
+	@media(min-width: 768px)
+	{
+		html{font-size: 16px;}
+     }
+     .container{
+     	max-width: 960px;
+     }
+     .pricing-header{
+     	max-width: 700px;
+     }
+     .card-deck .card{
+     	min-width: 220px;
+     }
+}
+ #progress_bar {
+    margin: 10px 0;
+    padding: 3px;
+    border: 1px solid #000;
+    font-size: 14px;
+    clear: both;
+    opacity: 0;
+    -moz-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
+    -webkit-transition: opacity 1s linear;
+  }
+  #progress_bar.loading {
+    opacity: 1.0;
+  }
+  #progress_bar .percent {
+    background-color: #99ccff;
+    height: auto;
+    width: 0;
+  }
+</style>
+</style>
+<div class="box-body pad" id="display">
+  <div class="w3-sidebar w3-sidenav w3-bar-block w3-card" style="width:45%;height:85%;right: 0">
+            <h3 class="w3-bar-item"></h3>
+        {% for table in tables %}
+               <h2>Plagiarism Report</h2>
+                    {{ table|safe }}
+        {% endfor %}   
+  </div>
+</div>
+
+  <div class="col s12 m6">
+     <div class="card hoverable" style="width: 50rem;">
+        <div class="box">
+            <div class="box-header">
+            </div>
+            <div class="box-body pad">
+              <form action="/SimilarityReport" method="post" enctype="multipart/form-data">
+                <embed width="600px" height="500px">
+                  <textarea class="textarea" id="fileContents" placeholder="Place some text here" name="text" value="{{ result }}"
+                  style="width: 90%; height: 400px; font-size: 14px; line-height: 18px; border: 10px solid #dddddd; padding: 20px;" >{{ result }}</textarea>
+                </embed>
+                  
+                  <div class="form-group col-md-6">
+                      <input type="file"  id="file-selector" size="40" onchange="importPortfolioFunction()"><br>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <button type="submit" value="submit" class="btn btn-secondary">Check</button>
+                  </div>
+                  <button onclick="abortRead();">Cancel read</button>
+                  <div id="progress_bar"><div class="percent">0%</div></div>
+                </form>
+
+              <script>
+                    function importPortfolioFunction(arg) {
+                      var file = document.getElementById("file-selector").files[0];
+                      if (file) {
+                      var reader = new FileReader();
+                      reader.readAsText(file, "UTF-8");
+                      reader.onload = function (evt) {
+                      document.getElementById("fileContents").innerHTML = evt.target.result;
+                      }
+                      reader.onerror = function (evt) {
+                      document.getElementById("fileContents").innerHTML = "error reading file";
+                      }
+                      }
+                    }
+              </script> 
+<!--               <script type="text/javascript">
+              function myfunction()
+              {
+                  var value=document.getElementById("display").value;
+                  if(value!=null)
+                  {
+                      value.css.style.display=block;
+                  }
+              }
+              </script>  -->             
+<!--                  
+                  <div class="preloader-wrapper big active">
+                  <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                      <div class="circle"></div>
+                    </div>
+                  </div>
+                </div> -->
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+                 

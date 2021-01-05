@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Report Page{% endblock %}
+{% block content %}
+<div class="box-header">
+</div>
+<div class="box-body pad">
+	<div class="w3-sidebar w3-sidenav w3-bar-block w3-card" style="width:40%;height:65%;right: 0">
+		<h3 class="w3-bar-item">Menu</h3>
+        <h2>Plagiarism Report</h2>
+	  {% if reports %}
+		<ul class=flashes>
+		{% for report in reports %}
+		  <li>{{ report }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}     
+	</div>
+</div>
+{% endblock %}

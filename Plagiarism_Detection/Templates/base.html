@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+  
+    <link href="/static/css/materialize.css" rel="stylesheet">
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/static/css/w3.css">
+    <link href="/static/css/w3-theme-green.css" rel="stylesheet">	
+<style>
+/* W3Schools Font Logo */
+.w3schools-logo {
+font-family:fontawesome;
+text-decoration:none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+font-size:40px;
+letter-spacing:1px;
+color:#5F9EA0;
+display:block;
+position:relative;
+}
+.w3-dropnav {
+display:none;
+padding-bottom:40px;
+position:absolute;
+width:100%;
+z-index:99 !important;
+}
+.w3-col .w3-btn {
+margin:5px 5px 5px 0;
+font-size:16px;
+}
+.w3-col.l4 .w3-card-2 {
+padding:15px 10px;
+height:260px;
+}
+.w3-theme {color:#fff !important;background-color:#4682B4 !important;}
+.w3-sidenav {
+z-index:3;
+width:230px;
+overflow:hidden !important;
+position:absolute !important;
+margin-bottom:-155px;
+}
+.w3-sidenav a {
+padding:0 16px;
+font-size:16px;
+}
+.w3-navbar {
+position:relative;
+z-index:4;
+font-size:17px;
+border: 1px solid #e7e7e7;
+background-color: #f3f3f3;
+}
+h1 {
+font-size:80px;
+color:#555555;
+margin:2px 0 -20px 0 !important;
+}
+@media screen and (min-width:769px){.w3-sidenav.w3-collapse{display:block !important;}}
+@media screen and (min-width:769px){.w3-opennav,.w3-accordion{display:none !important;}}
+@media screen and (min-width:769px){.w3-main{margin-left:230px !important;}}
+@media screen and (max-width:768px){.w3-sidenav.w3-collapse,.navbarbtns,.navex{display:none !important;}h1,.w3-jumbo{font-size:60px !important;}.w3-padding-jumbo{padding:32px !important;}}
+</style>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+<div class="w3-row w3-white w3-hide-medium w3-hide-small" style="top:3px;margin:0 0 0 10px">
+ <div class="w3-half" style="position:relative;top:20px">
+ 	<a class='w3schools-logo' href='http://www.aastu.edu.et/'><strong>Addis Ababa Science And Technology University</strong></a>
+ </div>
+  <div class="w3-half" style="margin-top:0px;position:relative;top:30px">
+  <img src="/static/images/logo.gif" style="width:55px;height:72px;">
+</div>
+ <div class="w3-half w3-margin-top w3-wide w3-hide-medium w3-hide-small">
+  <div class="w3-right" style="top:3px;margin:0 20px 0 0">STUDENT'S ASSIGNMENT CHECKING SITE</div>
+ </div>
+</div>
+<nav class="w3-container w3-navbar w3-padding w3-theme w3-wide navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">PLAGIARISIM DETECTION SYSTEM</a>
+</nav>
+	{% block content %}
+	{% endblock %}
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+	<script src="/bootstrap/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

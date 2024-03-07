@@ -1,6 +1,6 @@
-# This work is Paraphrase based plagiarism detection system which aimed at detecting paraphrased document by applying GENISM and NLTK python library in order to improve the available copy paste-based  detection system algorism. 
-Key responsibilities 
- Developing dynamic website that enable the user to check their document. 
- Coding the server-side system using python, and JavaScript 
- Coding the client-side system using html, bootstrap, and CSS on flask which is a python 
-micro framework. 
+### This work is a paraphrase-based plagiarism detection system aimed at detecting paraphrased documents by applying GENISM and NLTK python library to improve the available copy-paste-based  detection system algorithm. 
+##### Key Responsibilities 
+ Developing a dynamic website that enables the user to check their document. 
+ Coding the server-side system using Python, and JavaScript 
+ Coding the client-side system using HTML, bootstrap, and CSS on Flask which is a python 
+micro-framework. 
